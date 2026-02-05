@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-image-name: url('img/leaves.png');
+    --weathercard-image-name: url('img/triangle-mosaic.png');
+
+}
+
+body, html {
+    /* basic selectors */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    /* adjusting look */
+    display: flex;
+    background-image: var(--background-image-name);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}   
+
+#weather-card {
+    width: 90vw;
+    max-width: 28rem;
+    min-height: 50vh;
+    border: 3px outset #212121;
+    background-image: var(--weathercard-image-name);
+    padding: 1.25rem;
+}
+
+#search-section {
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #212121;
+    text-shadow: 0.5px 0.5px 0 #CDDC39,
+    -0.5px 0.5px 0 #CDDC39,
+    -0.5px -0.5px 0 #CDDC39,
+    0.5px -0.5px 0 #CDDC39;
+    font-weight: 400;
+}
+
+/* class for hiding status-area div */
+.hidden {
+    display: none;
+}
