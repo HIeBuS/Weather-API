@@ -6,6 +6,20 @@
     <title>Weather API</title>
 </head>
 <body>
-    
+    <main id="weather-card">
+        <form id="search-section">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Enter city name..." 
+                autocomplete="off"
+            >
+            <button type="submit" id="search-btn">
+                Search
+            </button>
+        </form>
+        <div id="status-area" class="hidden"></div>
+        <div id="weather-display"></div>
+    </main>
 </body>
 </html>
