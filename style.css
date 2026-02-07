@@ -3,7 +3,8 @@
 :root {
     --background-image-name: url('img/leaves.png');
     --weathercard-image-name: url('img/triangle-mosaic.png');
-
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
 }
 
 body, html {
@@ -19,29 +20,30 @@ body, html {
     display: flex;
     background-image: var(--background-image-name);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }   
 
 #weather-card {
     width: 90vw;
-    max-width: 28rem;
-    min-height: 50vh;
-    border: 3px outset #212121;
+    max-width: 40rem;
+    min-height: 20vh;
+    border: 3px outset var(--primary-text-color);
     background-image: var(--weathercard-image-name);
     padding: 1.25rem;
+    margin-top: -6rem;
 }
 
 #search-section {
-    padding-top: 0.8rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
 h1 {
     font-family: "Montserrat", sans-serif;
-    color: #212121;
+    color: var(--primary-text-color);
     text-shadow: 0.5px 0.5px 0 #CDDC39,
     -0.5px 0.5px 0 #CDDC39,
     -0.5px -0.5px 0 #CDDC39,
@@ -49,7 +51,43 @@ h1 {
     font-weight: 400;
 }
 
-/* class for hiding status-area div */
-.hidden {
-    display: none;
+.weatherStyles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.weatherStyles > h2 {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-text-color);
+}
+
+.weatherStyles > p {
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-text-color);
+}
+
+.search-input-props {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: 2px solid var(--primary-text-color);
+    font-family: "Montserrat", sans-serif;
+    max-width: 12rem;
+    max-height: 1.5rem;
+}
+
+.search-btn-props {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 2px solid var(--primary-text-color);
+    background-color: rgb(205, 220, 57,0.3);
+    font-family: "Montserrat", sans-serif;
+}
+
+.weather-icon {
+    width: 50px;  
+    height: 50px;
 }
